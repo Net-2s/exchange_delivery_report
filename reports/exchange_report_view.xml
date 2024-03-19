@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_exchange_report_delivery" model="ir.actions.report">
+            <field name="name">Exchange Delivery Slip</field>
+            <field name="model">stock.picking</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exchange_delivery_report.exchange_report_deliveryslip</field>
+            <field name="report_file">exchange_delivery_report.exchange_report_deliveryslip</field>
+            <field name="print_report_name">'Exchange Delivery Slip - %s - %s' % (object.partner_id.name or '', object.name)</field>
+            <field name="binding_model_id" ref="model_stock_picking"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>
